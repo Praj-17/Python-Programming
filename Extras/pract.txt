@@ -1,0 +1,4 @@
+I have found a way to deal with files
+The files get stored in this folder
+and we can read them from here
+The files are good and we can now organize it

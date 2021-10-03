@@ -1,0 +1,12 @@
+import os
+# print(dir(os))
+print(os.getcwd())
+os.chdir("E:\codes\CODE\PYTHON")
+print(os.getcwd())
+f = open("pract.txt")
+print(f.readline())
+print(os.listdir())
+os.mkdir("this")
+os.makedirs("this/that/he")
+os.removedirs("this/that/he")
+print(os.path.exists("E:\codes\CODE\PYTHON"))
