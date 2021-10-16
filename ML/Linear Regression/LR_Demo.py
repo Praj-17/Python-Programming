@@ -14,19 +14,19 @@ diabetes = datasets.load_diabetes()
 # print(diabetes.DESCR)
 
 # diabetes_x = diabetes.data[:, np.newaxis,2] 
-diabetes_x = diabetes.data # While using this line remove the plot functions as it cant be plot
+diabetes_x = np.array([[1],[2],[3]]) # While using this line remove the plot functions as it cant be plot
 #creates an array of array which will be x axis
 # print(diabetes_x)
 
 #Partitioning x(FEATURES)
-diabetes_x_train = diabetes_x[:-30] # -30 = last 30 records
-diabetes_x_test = diabetes_x[-30:] # -30 = first 30 records
+diabetes_x_train = diabetes_x # -30 = last 30 records
+diabetes_x_test = diabetes_x # -30 = first 30 records
 
 #Now while partitioning y make sure you take same number of records beacuse the data in x correspponds to y and any imbalance will lead to formation of missing values
 
 #Partitioning y(LABELS)
-diabetes_y_train = diabetes.target [:-30]
-diabetes_y_test = diabetes.target [-30:]
+diabetes_y_train = np.array([[3],[2],[4]])
+diabetes_y_test = np.array([[3],[2],[4]])
 
 #Calling the imp function
 model = linear_model.LinearRegression() 
@@ -46,6 +46,6 @@ print("Weights: ", model.coef_)
 print("Intercept: ", model.intercept_)
 
 #scatter plot
-# plt.scatter(diabetes_x_test, diabetes_y_test)
-# plt.plot(diabetes_x_test, diabetes_y_predicted)
-# plt.show()
+plt.scatter(diabetes_x_test, diabetes_y_test)
+plt.plot(diabetes_x_test, diabetes_y_predicted)
+plt.show()
