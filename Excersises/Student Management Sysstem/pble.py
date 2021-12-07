@@ -13,8 +13,7 @@ def display_menu():
     print("3. Search Student")
     print("4. Update Student")
     print("5. Delete Student")
-    print("6. Quit")
-
+    print("6. Quit")          
 
 def add_student():
     print("-------------------------")
