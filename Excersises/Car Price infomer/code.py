@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 dataset = pd.read_csv("E:\\DATA SETS\\2. Cars Data1.csv") # Place the path of your dataset here 
 dataset = np.array(dataset)
 # car_prices = dict(zip(model_name,[model_price, dataset['Cylinders'], dataset['EngineSize'], dataset['Horsepower'], dataset['Weight'], dataset['MPG_City'], dataset['MPG_Highway']]))
