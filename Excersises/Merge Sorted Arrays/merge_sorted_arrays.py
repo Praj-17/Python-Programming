@@ -71,7 +71,42 @@ def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
                 #     j+=1
         nums1[-1] =nums2[-1]
         print(nums1)
-merge([1,2,3,0,0,0], 3,[2,5,6],3)
+def merge2(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+    if m ==0: 
+        for i in range(n):
+            nums1[i] = nums2[i]
+    if n != 0:
+            i,j,k = 0,0,0
+            l1 = [-1 for l in range(m+n)]
+            
+            if len(nums1) == n: 
+                for i in range(n):     
+                    nums1[i] == nums2[i]
+            else:
+                while (i<=m):
+                    if nums1[i]<=nums2[j]:
+                        l1[k] = nums1[i]
+                    else:
+                        l1[k] = nums2[j]
+                    i +=1
+                    j +=1
+                    k +=1
+                while i<=m-1:
+                    l1[k] = nums1[i]
+                    i+=1
+                    k+=1
+                while j<=n-1:
+                    l1[k] = nums2[j]
+                    j+=1
+                    k+=1
+            for p in range(m+n):
+                nums1[p] = l1[p] 
+            print(nums1)
+                    
+                
+                    
+
+merge2([1,2,3,0,0,0], 3,[2,5,6],3)
 #              i          j
         
         
